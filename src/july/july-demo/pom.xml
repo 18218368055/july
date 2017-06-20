@@ -7,20 +7,15 @@
     <artifactId>july</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>july-utils</artifactId>
-  <name>july-utils</name>
+  <artifactId>july-demo</artifactId>
+  <name>july-demo</name>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
-	<dependency>
-	    <groupId>com.qylyx.july</groupId>
-	    <artifactId>july-base</artifactId>
-	</dependency>
-	
-  	<dependency>
-	    <groupId>org.apache.commons</groupId>
-	    <artifactId>commons-lang3</artifactId>
-	</dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+    </dependency>
   </dependencies>
 </project>

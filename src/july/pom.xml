@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.qyly.july</groupId>
+  <groupId>com.qylyx.july</groupId>
   <artifactId>july</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
@@ -9,6 +9,7 @@
     <module>july-salog</module>
     <module>july-utils</module>
     <module>july-base</module>
+    <module>july-demo</module>
   </modules>
   
   <distributionManagement>
@@ -23,4 +24,58 @@
   		<url>http://localhost:8081/nexus/content/repositories/releases</url>
   	</repository>
   </distributionManagement>
+  
+  <dependencyManagement>
+  	<dependencies>
+  		<!-- july -->
+  		<dependency>
+		    <groupId>com.qylyx.july</groupId>
+		    <artifactId>july-base</artifactId>
+		    <version>${project.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.qylyx.july</groupId>
+		    <artifactId>july-utils</artifactId>
+		    <version>${project.version}</version>
+		</dependency>
+		
+		<!-- 外部 -->
+		<dependency>
+	      	<groupId>junit</groupId>
+	      	<artifactId>junit</artifactId>
+	      	<version>3.8.1</version>
+	      	<scope>test</scope>
+	    </dependency>
+  		<dependency>
+  			<groupId>org.apache.commons</groupId>
+		    <artifactId>commons-lang3</artifactId>
+		    <version>3.5</version>
+  		</dependency>
+  		<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-api</artifactId>
+		    <version>1.7.25</version>
+		</dependency>
+  		<dependency>
+		    <groupId>com.alibaba</groupId>
+		    <artifactId>fastjson</artifactId>
+		    <version>1.2.31</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.aspectj</groupId>
+		    <artifactId>aspectjrt</artifactId>
+		    <version>1.8.10</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.aspectj</groupId>
+		    <artifactId>aspectjweaver</artifactId>
+		    <version>1.8.10</version>
+		</dependency>
+		<dependency>
+		    <groupId>cglib</groupId>
+		    <artifactId>cglib-nodep</artifactId>
+		    <version>3.2.5</version>
+		</dependency>
+  	</dependencies>
+  </dependencyManagement>
 </project>
