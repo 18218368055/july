@@ -15,6 +15,10 @@
   <dependencies>
   	<dependency>
 	    <groupId>com.qylyx.july</groupId>
+	    <artifactId>july-base</artifactId>
+	</dependency>
+  	<dependency>
+	    <groupId>com.qylyx.july</groupId>
 	    <artifactId>july-utils</artifactId>
 	</dependency>
   	
