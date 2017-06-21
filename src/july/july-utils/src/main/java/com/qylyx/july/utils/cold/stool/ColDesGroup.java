@@ -143,6 +143,8 @@ public class ColDesGroup {
 				for (int i = 0; i < itArr.length; i++) {
 					arr[i] = itArr[i];
 				}
+				//重置此列缓存数据为基础数据类型
+				resolveArr[colIndex] = arr;
 			}
 		}
 		return arr;
@@ -166,6 +168,8 @@ public class ColDesGroup {
 				for (int i = 0; i < itArr.length; i++) {
 					arr[i] = itArr[i];
 				}
+				//重置此列缓存数据为基础数据类型
+				resolveArr[colIndex] = arr;
 			}
 		}
 		return arr;
@@ -189,6 +193,8 @@ public class ColDesGroup {
 				for (int i = 0; i < itArr.length; i++) {
 					arr[i] = itArr[i];
 				}
+				//重置此列缓存数据为基础数据类型
+				resolveArr[colIndex] = arr;
 			}
 		}
 		return arr;
@@ -212,6 +218,8 @@ public class ColDesGroup {
 				for (int i = 0; i < itArr.length; i++) {
 					arr[i] = itArr[i];
 				}
+				//重置此列缓存数据为基础数据类型
+				resolveArr[colIndex] = arr;
 			}
 		}
 		return arr;

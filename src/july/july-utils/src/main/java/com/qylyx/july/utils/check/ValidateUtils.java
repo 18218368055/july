@@ -98,7 +98,7 @@ public class ValidateUtils {
 	 * null    =>  true
 	 * arr.length == 0    =>  true
 	 * </pre>
-	 * @param coll 数组
+	 * @param arr 数组
 	 * @return true：为空   false：不为空
 	 */
 	public static boolean isEmpty(char[] arr) {
@@ -111,10 +111,116 @@ public class ValidateUtils {
 	 * null    =>  false
 	 * arr.length == 0    =>  false
 	 * </pre>
-	 * @param coll 数组
+	 * @param arr 数组
 	 * @return true：不为空   false：为空
 	 */
 	public static boolean isNotEmpty(char[] arr) {
-		return isEmpty(arr);
+		return !isEmpty(arr);
 	}
+	
+	/**
+	 * 是否为空
+	 * <pre>
+	 * null    =>  true
+	 * arr.length == 0    =>  true
+	 * </pre>
+	 * @param arr 数组
+	 * @return true：为空   false：不为空
+	 */
+	public static boolean isEmpty(int[] arr) {
+		return arr == null || arr.length ==0;
+	}
+	
+	/**
+	 * 是否不为空
+	 * <pre>
+	 * null    =>  false
+	 * arr.length == 0    =>  false
+	 * </pre>
+	 * @param arr 数组
+	 * @return true：不为空   false：为空
+	 */
+	public static boolean isNotEmpty(int[] arr) {
+		return !isEmpty(arr);
+	}
+	
+	/**
+	 * 是否为空
+	 * <pre>
+	 * null    =>  true
+	 * arr.length == 0    =>  true
+	 * </pre>
+	 * @param arr 数组
+	 * @return true：为空   false：不为空
+	 */
+	public static boolean isEmpty(long[] arr) {
+		return arr == null || arr.length ==0;
+	}
+	
+	/**
+	 * 是否不为空
+	 * <pre>
+	 * null    =>  false
+	 * arr.length == 0    =>  false
+	 * </pre>
+	 * @param arr 数组
+	 * @return true：不为空   false：为空
+	 */
+	public static boolean isNotEmpty(long[] arr) {
+		return !isEmpty(arr);
+	}
+	
+	/**
+	 * 是否为空
+	 * <pre>
+	 * null    =>  true
+	 * arr.length == 0    =>  true
+	 * </pre>
+	 * @param arr 数组
+	 * @return true：为空   false：不为空
+	 */
+	public static boolean isEmpty(double[] arr) {
+		return arr == null || arr.length ==0;
+	}
+	
+	/**
+	 * 是否不为空
+	 * <pre>
+	 * null    =>  false
+	 * arr.length == 0    =>  false
+	 * </pre>
+	 * @param arr 数组
+	 * @return true：不为空   false：为空
+	 */
+	public static boolean isNotEmpty(double[] arr) {
+		return !isEmpty(arr);
+	}
+	
+	/**
+	 * 是否为空
+	 * <pre>
+	 * null    =>  true
+	 * arr.length == 0    =>  true
+	 * </pre>
+	 * @param arr 数组
+	 * @return true：为空   false：不为空
+	 */
+	public static boolean isEmpty(float[] arr) {
+		return arr == null || arr.length ==0;
+	}
+	
+	/**
+	 * 是否不为空
+	 * <pre>
+	 * null    =>  false
+	 * arr.length == 0    =>  false
+	 * </pre>
+	 * @param arr 数组
+	 * @return true：不为空   false：为空
+	 */
+	public static boolean isNotEmpty(float[] arr) {
+		return !isEmpty(arr);
+	}
+	
+	
 }
