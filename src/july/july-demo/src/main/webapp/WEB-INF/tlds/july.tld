@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib version="2.0" xmlns="http://Java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-jsptaglibrary_2_0.xsd">
+	<jspversion>1.2</jspversion>
+	<tlibversion>1.0</tlibversion>
+	<shortname>july</shortname>
+	<description>july标签库</description>
+	<display-name>july core</display-name>
+	<!-- tag -->
+  
+	<!-- fn -->
+	<function>
+		<description>
+			集合是否为空
+			null    =>  true
+	 		coll.size() == 0    =>  true
+		</description>
+		<name>isEmpty</name>
+		<function-class>com.qylyx.july.tags.fn.JulyFunctions</function-class>
+		<function-signature>boolean isEmpty(java.util.Collection)</function-signature>
+	</function>
+	<function>
+		<description>
+			集合是否不为空
+			null    =>  false
+	 		coll.size() == 0    =>  false
+		</description>
+		<name>isNotEmpty</name>
+		<function-class>com.qylyx.july.tags.fn.JulyFunctions</function-class>
+		<function-signature>boolean isNotEmpty(java.util.Collection)</function-signature>
+	</function>
+</taglib>
+       

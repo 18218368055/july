@@ -11,6 +11,7 @@
     <module>july-base</module>
     <module>july-demo</module>
     <module>july-reports</module>
+    <module>july-tags</module>
   </modules>
   
   <distributionManagement>
@@ -42,6 +43,11 @@
 		<dependency>
 		    <groupId>com.qylyx.july</groupId>
 		    <artifactId>july-salog</artifactId>
+		    <version>${project.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.qylyx.july</groupId>
+		    <artifactId>july-tags</artifactId>
 		    <version>${project.version}</version>
 		</dependency>
 		
