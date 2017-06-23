@@ -12,10 +12,22 @@
 </head>
 <body>
 	tags index!!!
+	<P>
 	
 	<c:if test="${july:isEmpty(null)}">
-		aaaa
+		july:isEmpty测试：标签验证！！
 	</c:if>
+	<p>
+	
+	july:toJson测试：${july:toJson(user)}
+	<p>
+	
+	july:collSize集合测试：${july:collSize(null)} - ${july:collSize(userList)}
+	<p>
+	
+	july:arrLen集合测试：${july:arrLen(null)}
+	
+	
 	
 	<script type="text/javascript" src="/static/js/tags/index.js"></script>
 </body>

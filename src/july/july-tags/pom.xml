@@ -17,5 +17,10 @@
   		<groupId>com.qylyx.july</groupId>
   		<artifactId>july-utils</artifactId>
   	</dependency>
+  	
+  	<dependency>
+	    <groupId>com.alibaba</groupId>
+	    <artifactId>fastjson</artifactId>
+	</dependency>
   </dependencies>
 </project>

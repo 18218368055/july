@@ -31,5 +31,17 @@
 		<function-class>com.qylyx.july.tags.fn.JulyFunctions</function-class>
 		<function-signature>boolean isNotEmpty(java.util.Collection)</function-signature>
 	</function>
+	<function>
+		<description>对象转json</description>
+		<name>toJson</name>
+		<function-class>com.qylyx.july.tags.fn.JulyFunctions</function-class>
+		<function-signature>java.lang.String toJson(java.lang.Object)</function-signature>
+	</function>
+	<function>
+		<description>集合数量，null时为0</description>
+		<name>collSize</name>
+		<function-class>com.qylyx.july.tags.fn.JulyFunctions</function-class>
+		<function-signature>int collSize(java.util.Collection)</function-signature>
+	</function>
 </taglib>
        

@@ -2,6 +2,7 @@ package com.qylyx.july.tags.fn;
 
 import java.util.Collection;
 
+import com.alibaba.fastjson.JSONObject;
 import com.qylyx.july.utils.check.ValidateUtils;
 
 /**
@@ -35,5 +36,23 @@ public class JulyFunctions {
 	 */
 	public static boolean isNotEmpty(Collection<?> coll) {
 		return ValidateUtils.isNotEmpty(coll);
+	}
+	
+	/**
+	 * 对象转json
+	 * @param obj 对象
+	 * @return json字符串
+	 */
+	public static String toJson(Object obj) {
+		return JSONObject.toJSONString(obj);
+	}
+	
+	/**
+	 * 集合数量，null时为0
+	 * @param coll 集合
+	 * @return
+	 */
+	public static int collSize(Collection<?> coll) {
+		return coll == null ? 0 : coll.size();
 	}
 }
