@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import com.qylyx.july.salog.pop.SalogHandle;
+import com.qylyx.july.salog.mop.SalogHandle;
 
 /**
  * salog日志自动打印例子
