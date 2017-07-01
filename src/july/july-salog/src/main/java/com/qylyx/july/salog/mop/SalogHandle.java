@@ -25,14 +25,16 @@ public class SalogHandle {
 	/**
 	 * salog配置参数
 	 */
-	protected SalogSetting setting;
+	protected SalogSetting setting = new SalogSetting();
 	
 	/**
 	 * 由自定义AOP转入此处理方法，进行日志打印的相关处理
 	 * @param point
 	 * @return
 	 */
-	public Object handle(ProceedingJoinPoint point) {
+	public Object handle(ProceedingJoinPoint point) throws Throwable{
+		//是否是由接口方法抛出的异常
+		boolean proceedException = false;
 		try {
 			SalogHdAo hdAo = new SalogHdAo();
 			hdAo.setIn(SalogUseType.YES.equals(getSetting().getIn()));
@@ -71,7 +73,13 @@ public class SalogHandle {
 				logger.info(show);
 			}
 			
-			Object result = point.proceed();
+			Object result = null;
+			try {
+				result = point.proceed();
+			} catch (Throwable e) {
+				proceedException = true;
+				throw e;
+			}
 			
 			//打印方法结束
 			if (hdAo.isOut()) {
@@ -85,6 +93,9 @@ public class SalogHandle {
 			}
 			return result;
 		} catch (Throwable e) {
+			//如果是由接口方法抛出的异常，在此不做会进行接口方法功能改动的操作
+			if (proceedException)
+				throw e;
 			throw new JulySalogException("日志自动打印操作异常！", e);
 		}
 		
@@ -106,11 +117,11 @@ public class SalogHandle {
 			hdAo.setOurResult(SalogUseType.YES.equals(salog.outResult()));
 		
 		//salog对象先取prefix，没有设置再取value
-		String salogPrefix = StringUtils.isNotBlank(salog.prefix()) ? salog.prefix() : salog.value();
+//		String salogPrefix = StringUtils.isNotBlank(salog.prefix()) ? salog.prefix() : salog.value();
 		
 		String segmItem = StringUtils.isNotBlank(hdAo.getPrefix()) 
-				&& StringUtils.isNotBlank(salogPrefix) ? hdAo.getSegm() : "";
-		hdAo.setPrefix(hdAo.getPrefix() + segmItem + salog.prefix() + salog.value());
+				&& StringUtils.isNotBlank(salog.value()) ? hdAo.getSegm() : "";
+		hdAo.setPrefix(hdAo.getPrefix() + segmItem + salog.value());
 	}
 	
 	/**
@@ -123,9 +134,6 @@ public class SalogHandle {
 	}
 	
 	public SalogSetting getSetting() {
-		if (setting == null) {
-			setting = new SalogSetting();
-		}
 		return setting;
 	}
 	

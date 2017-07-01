@@ -15,14 +15,14 @@ import com.qylyx.july.salog.config.etype.SalogUseType;
 @Target(value = {ElementType.TYPE, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Salog {
-	/**
-	 * 打印的日志前缀，如方法的作用
-	 * @return
-	 */
-	String prefix() default "";
+//	/**
+//	 * 打印的日志前缀，如方法的作用
+//	 * @return
+//	 */
+//	String prefix() default "";
 	
 	/**
-	 * 等价prefix
+	 * 打印的日志前缀，如方法的作用
 	 * @return
 	 */
 	String value() default "";

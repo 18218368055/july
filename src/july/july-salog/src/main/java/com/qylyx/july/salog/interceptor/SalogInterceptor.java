@@ -39,9 +39,10 @@ public class SalogInterceptor {
 	 * aop环绕通知
 	 * @param point
 	 * @return
+	 * @throws Throwable 
 	 */
 	@Around("salogMethod()")
-	public Object around(ProceedingJoinPoint point) {
+	public Object around(ProceedingJoinPoint point) throws Throwable {
 		return salogHandle.handle(point);
 	}
 	
