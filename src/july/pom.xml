@@ -83,19 +83,9 @@
 			<version>1.4.2.RELEASE</version>
 		</dependency>
 		<dependency>
-		    <groupId>org.aspectj</groupId>
-		    <artifactId>aspectjrt</artifactId>
-		    <version>1.8.10</version>
-		</dependency>
-		<dependency>
-		    <groupId>org.aspectj</groupId>
-		    <artifactId>aspectjweaver</artifactId>
-		    <version>1.8.10</version>
-		</dependency>
-		<dependency>
-		    <groupId>cglib</groupId>
-		    <artifactId>cglib-nodep</artifactId>
-		    <version>3.2.5</version>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-aop</artifactId>
+		    <version>1.5.2.RELEASE</version>
 		</dependency>
 		<dependency>
 		    <groupId>org.apache.poi</groupId>
